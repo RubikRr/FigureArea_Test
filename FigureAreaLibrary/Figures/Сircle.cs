@@ -9,7 +9,7 @@ namespace FigureAreaLibrary.Figures
     public class Сircle:IFigure
     {
 
-        public double? TryGetArea()
+        public double TryGetArea()
         {
             var area = 0;
             return area;

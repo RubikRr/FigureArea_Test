@@ -6,7 +6,8 @@ namespace UserAplication
     {
         static void Main(string[] args)
         {
-            var triangle = new Triangle();
+            var triangle = new Triangle(3,4,5);
+            if (triangle.IsRightTriangle() ) { Console.WriteLine("ДААААААААААА"); }
         }
     }
 }
