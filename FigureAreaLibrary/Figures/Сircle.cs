@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FigureAreaLibrary.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace FigureAreaLibrary.Figures
 {
-    public class Сircle:IFigure
+    public class Сircle: IFigure
     {
 
-        public double TryGetArea()
+        public double GetArea()
         {
             var area = 0;
             return area;

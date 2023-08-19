@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FigureAreaLibrary
+namespace FigureAreaLibrary.Interfaces
 {
     public interface IFigure
     {
-        public double TryGetArea();
+        public double GetArea();
 
-        public bool IsValid();
+        
     }
 }

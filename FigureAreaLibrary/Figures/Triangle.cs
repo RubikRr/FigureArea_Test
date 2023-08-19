@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FigureAreaLibrary.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FigureAreaLibrary.Figures
 {
-    public class Triangle : IFigure
+    public class Triangle : ITriangle
     {
         private double sideA;
         private double sideB;
@@ -59,20 +60,20 @@ namespace FigureAreaLibrary.Figures
 
         public Triangle(double sideA, double sideB, double sideC)
         {
-            if (!IsValid(sideA, sideB, sideC))
+            if (!this.IsValid(sideA, sideB, sideC))
                 throw new Exception("Треугольник с такими сторонами не может существовать");
             SideA = sideA;
             SideB = sideB;
             SideC = sideC;
         }
 
-        public double TryGetArea()
+        public double GetArea()
         {
             var area = Math.Sqrt(HalfPerimeter * (HalfPerimeter - SideA) * (HalfPerimeter - SideB) * (HalfPerimeter - SideC));
             return area;
         }
 
-        public static bool IsValid(double sideA, double sideB, double sideC)
+        public bool IsValid(double sideA, double sideB, double sideC)
         {
             var maxSide = Math.Max(sideA, Math.Max(sideB, sideC));
             var minSide = Math.Min(sideA, Math.Min(sideB, sideC));
@@ -84,6 +85,5 @@ namespace FigureAreaLibrary.Figures
         {
             return maxSide * maxSide == minSide * minSide + averageSide * averageSide;
         }
-
     }
 }
