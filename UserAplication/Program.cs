@@ -1,10 +1,12 @@
-﻿namespace UserAplication
+﻿using FigureAreaLibrary.Figures;
+
+namespace UserAplication
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var triangle = new Triangle();
         }
     }
 }

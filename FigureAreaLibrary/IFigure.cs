@@ -8,6 +8,6 @@ namespace FigureAreaLibrary
 {
     public interface IFigure
     {
-        public double? TryGetArea();
+        public double TryGetArea();
     }
 }

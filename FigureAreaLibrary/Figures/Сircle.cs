@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FigureAreaLibrary.Figures
 {
-    internal class Сircle:IFigure
+    public class Сircle:IFigure
     {
 
         public double? TryGetArea()
