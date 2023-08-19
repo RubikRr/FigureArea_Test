@@ -59,8 +59,8 @@ namespace FigureAreaLibrary.Figures
 
         public Triangle(double sideA, double sideB, double sideC)
         {
-            if (!IsTriange(sideA, sideB, sideC))
-                throw new Exception("Треугольник с такими сторонами не может существовать существует");
+            if (!IsValid(sideA, sideB, sideC))
+                throw new Exception("Треугольник с такими сторонами не может существовать");
             SideA = sideA;
             SideB = sideB;
             SideC = sideC;
@@ -72,7 +72,7 @@ namespace FigureAreaLibrary.Figures
             return area;
         }
 
-        public static bool IsTriange(double sideA, double sideB, double sideC)
+        public static bool IsValid(double sideA, double sideB, double sideC)
         {
             var maxSide = Math.Max(sideA, Math.Max(sideB, sideC));
             var minSide = Math.Min(sideA, Math.Min(sideB, sideC));

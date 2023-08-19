@@ -14,5 +14,8 @@ namespace FigureAreaLibrary.Figures
             var area = 0;
             return area;
         }
+
+        public bool IsValid()
+        { return false; }
     }
 }

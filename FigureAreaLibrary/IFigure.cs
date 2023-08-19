@@ -9,5 +9,7 @@ namespace FigureAreaLibrary
     public interface IFigure
     {
         public double TryGetArea();
+
+        public bool IsValid();
     }
 }
