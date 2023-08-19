@@ -7,16 +7,23 @@ using System.Threading.Tasks;
 
 namespace FigureAreaLibrary.Figures
 {
-    public class Сircle: IFigure
+    public class Сircle : IFigure
     {
-
+        public double radius;
+        public double Raidus
+        {
+            get { return radius; }
+            set
+            {
+                if (value < 0)
+                    throw new Exception("Радиус не может быть отрицательным числом");
+                radius = value;
+            }
+        }
         public double GetArea()
         {
-            var area = 0;
+            var area = Math.PI*Raidus*Raidus;
             return area;
         }
-
-        public bool IsValid()
-        { return false; }
     }
 }

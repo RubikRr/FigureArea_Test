@@ -18,8 +18,9 @@ namespace FigureAreaLibrary.Figures
             get { return sideA; }
             set
             {
-                if (value > 0)
-                    sideA = value;
+                if (value < 0)
+                    throw new Exception("Сторона треугольника не может быть отрицательным числом");
+                sideB = value;
             }
         }
         public double SideB
@@ -27,8 +28,9 @@ namespace FigureAreaLibrary.Figures
             get { return sideB; }
             set
             {
-                if (value > 0)
-                    sideB = value;
+                if (value < 0)
+                    throw new Exception("Сторона треугольника не может быть отрицательным числом");
+                sideB = value;
             }
         }
         public double SideC
@@ -36,8 +38,9 @@ namespace FigureAreaLibrary.Figures
             get { return sideC; }
             set
             {
-                if (value > 0)
-                    sideC = value;
+                if (value < 0)
+                    throw new Exception("Сторона треугольника не может быть отрицательным числом");
+                sideC = value;
             }
         }
 
