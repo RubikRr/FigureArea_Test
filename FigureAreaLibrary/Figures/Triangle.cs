@@ -20,7 +20,7 @@ namespace FigureAreaLibrary.Figures
             {
                 if (value < 0)
                     throw new Exception("Сторона треугольника не может быть отрицательным числом");
-                sideB = value;
+                sideA = value;
             }
         }
         public double SideB
