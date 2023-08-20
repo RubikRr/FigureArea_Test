@@ -1,13 +1,8 @@
 ﻿using FigureAreaLibrary.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FigureAreaLibrary.Figures
 {
-    public class Сircle : IFigure
+    public class Circle : IFigure
     {
         public double radius;
         public double Raidus
@@ -19,6 +14,10 @@ namespace FigureAreaLibrary.Figures
                     throw new Exception("Радиус не может быть отрицательным числом");
                 radius = value;
             }
+        }
+        public Circle(double radius)
+        {
+            Raidus = radius;
         }
         public double GetArea()
         {

@@ -64,7 +64,7 @@ namespace FigureAreaLibrary.Figures
         public Triangle(double sideA, double sideB, double sideC)
         {
             if (!this.IsValid(sideA, sideB, sideC))
-                throw new Exception("Треугольник с такими сторонами не может существовать");
+                throw new Exception("Треугольник с такими сторонами не может существовать. Большая сторона должна быть меньше суммы двух других");
             SideA = sideA;
             SideB = sideB;
             SideC = sideC;
